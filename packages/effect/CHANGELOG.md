@@ -1,5 +1,30 @@
 # effect
 
+## 4.0.0-beta.108
+
+### Patch Changes
+
+- [#6546](https://github.com/Effect-TS/effect/pull/6546) [`dfb173e`](https://github.com/Effect-TS/effect/commit/dfb173efffd20c4feded4efe409018dd55acdca8) Thanks @xianjianlf2! - Handle BigInt values safely and consistently across JSON diagnostics and logger formats.
+
+- [#7174](https://github.com/Effect-TS/effect/pull/7174) [`005e090`](https://github.com/Effect-TS/effect/commit/005e0902cace9f8960a4f43573665a3a9b53b6fa) Thanks @tim-smart! - Fix `Queue.await` failing with `Cause.Done` when registered before the queue ends.
+
+- [#7180](https://github.com/Effect-TS/effect/pull/7180) [`c82c532`](https://github.com/Effect-TS/effect/commit/c82c53228dc1c50cc99654ce6de7766b4de09e75) Thanks @gcanti! - Prioritize redacted representations in formatters and normalize text logger levels to uppercase.
+
+- [#7189](https://github.com/Effect-TS/effect/pull/7189) [`08a3c74`](https://github.com/Effect-TS/effect/commit/08a3c74133206fc1cc728e0aa96d02e672fd80bd) Thanks @gcanti! - Fix `HttpApi` query decoding for array parameters with a single value.
+
+- [#6550](https://github.com/Effect-TS/effect/pull/6550) [`eb0bae0`](https://github.com/Effect-TS/effect/commit/eb0bae08d543d58754c9bb7a57e67c1e2bb3f55a) Thanks @xianjianlf2! - Return fresh OpenAPI specs from cached `OpenApi.fromApi` calls.
+
+- [#7188](https://github.com/Effect-TS/effect/pull/7188) [`97b544d`](https://github.com/Effect-TS/effect/commit/97b544d8b636587647b90691d669305c0eb4fc66) Thanks @gcanti! - Mark the internal `~sentinels` Schema annotation as `@internal` so release declaration stripping removes it together with `SchemaAST.Sentinel`. This keeps the published declarations self-consistent for consumers that type-check dependencies with `skipLibCheck: false`.
+
+- [#7158](https://github.com/Effect-TS/effect/pull/7158) [`4f6d131`](https://github.com/Effect-TS/effect/commit/4f6d131e85d74ab0ec0300e52e503a5f943fc576) Thanks @k3dom! - Improve Union candidate selection: a nested union member is dispatched by the sentinels common to all its members, and candidates whose sentinel the input contradicts are excluded.
+
+- [#7178](https://github.com/Effect-TS/effect/pull/7178) [`fad4b7c`](https://github.com/Effect-TS/effect/commit/fad4b7c5138b3f38c2427436da2e0685c1ca4e9b) Thanks @tim-smart! - Use Promise microtasks for synchronous Scheduler dispatch.
+
+- [#7181](https://github.com/Effect-TS/effect/pull/7181) [`accf447`](https://github.com/Effect-TS/effect/commit/accf4474513064e2a21d14b1937503261b4f34dc) Thanks @gcanti! - Move `SchemaError` into the `Schema` module and remove the standalone `SchemaError` module.
+
+- [#7191](https://github.com/Effect-TS/effect/pull/7191) [`8458951`](https://github.com/Effect-TS/effect/commit/84589518c3966c63d7f3679a5296d380eb1ba887) Thanks @Digifox03! - Fix `HttpRouter.Middleware.layer` to provide request error services for errors declared in `handles`, and expose global
+  middleware errors from `HttpRouter.toHttpEffect`.
+
 ## 4.0.0-beta.107
 
 ### Patch Changes
